@@ -2,11 +2,16 @@ import streamlit as st
 import pickle
 import numpy as np
 import time
+import os
+
+# Define path to saved artifacts.
+parent_dir = os.path.dirname(os.getcwd())
+artifact_dir = os.path.join(parent_dir,'artifacts')
 
 # Load precomputed datasets
-book_data = pickle.load(open('../artifacts/book_data.pkl','rb'))               # Book metadata (title, author, year, etc.)
-similarity_data = pickle.load(open('../artifacts/similarity_data.pkl','rb'))   # Precomputed similarity matrix between books
-popular_books = pickle.load(open('../artifacts/top_50_books.pkl','rb'))        # Top 50 popular books data
+book_data = pickle.load(open(f'{artifact_dir}/book_data.pkl','rb'))               # Book metadata (title, author, year, etc.)
+similarity_data = pickle.load(open(f'{artifact_dir}/similarity_data.pkl','rb'))   # Precomputed similarity matrix between books
+popular_books = pickle.load(open(f'{artifact_dir}/top_50_books.pkl','rb'))        # Top 50 popular books data
 
 def get_book_details(book : str) -> np.ndarray:
     """
@@ -125,7 +130,7 @@ def get_recommendation(selected_book:str)->None:
         with j:
             with st.container(border=True,height=450):
                 temp = get_book_details(similar_books[i])
-                st.image(temp[4],use_column_width=True)
+                st.image(temp[4],use_container_width=True)
                 st.button('view',key=i,on_click=update_session,args=(similar_books[i],))
                 st.write(similar_books[i])
                     
@@ -137,7 +142,7 @@ def get_recommendation(selected_book:str)->None:
         with j:
             with st.container(border=True,height=480):
                 temp = get_book_details(similar_books[i+5])
-                st.image(temp[4],use_column_width=True)
+                st.image(temp[4],use_container_width=True)
                 st.button('view',key=i+5,on_click=update_session,args=(similar_books[i+5],))
                 st.write(similar_books[i+5])
                     
@@ -186,10 +191,8 @@ with trending:
             with j:
                 st.write(' ')
                 with st.container(border=True,height=460):  
-                    # _,c,_=st.columns([1,8,1])
-                    # with c:
-                        temp=get_book_details(popular_books[i+(r*5),0])
-                        st.write('Rating  : ',np.round(popular_books[i+(r*5),1],2))
-                        st.image(temp[4],use_column_width=True,)
-                        st.write(popular_books[i,0])
-                    
+                    temp=get_book_details(popular_books[i+(r*5),0])
+                    st.write('Rating  : ',np.round(popular_books[i+(r*5),1],2))
+                    st.image(temp[4],use_container_width=True,)
+                    st.write(popular_books[i,0])
+                

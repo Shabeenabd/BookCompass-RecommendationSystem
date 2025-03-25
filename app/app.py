@@ -5,8 +5,6 @@ import time
 import os
 
 # Define path to saved artifacts.
-# parent_dir = os.path.dirname(os.getcwd())
-# artifact_dir = os.path.join(parent_dir,'artifacts')
 artifact_dir = os.path.join('artifacts')
 
 # Load precomputed datasets

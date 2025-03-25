@@ -1,7 +1,7 @@
 # 📚 BookCompass - Personalized Book Recommendation System
 BookCompass is an intelligent, personalized Book Recommendation System web application designed to help readers discover their next great read. The application leverages advanced recommendation algorithms to suggest books tailored to each user’s preferences and interactions.
 
-🌐 Live Demo https://book-compass.streamlit.app/
+🌐 Live web app --> https://book-compass.streamlit.app/
 
 ## 📊 Project Overview
 BookCompass is a smart, data-driven book recommendation system that helps users discover their next favorite read using collaborative filtering (user-based and item-based) and popularity-based recommendations. Whether you're an avid reader or just starting your literary journey, BookCompass tailors suggestions based on your past interactions and the reading habits of like-minded users.

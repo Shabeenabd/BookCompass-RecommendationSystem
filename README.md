@@ -51,22 +51,22 @@ Developed using Streamlit, BookCompass offers a user-friendly interface and is h
 ```bash
 BookCompass/ 
 ├── app
-│    └── app.py
+│    └── app.py                                    # Web Application
 │   
-├── artifacts
+├── artifacts                                      # Processed matices
 │    ├── book_data.pkl
 │    ├── similarity_data.pkl
 │    └── top_50_books.pkl
 │
-├── images
+├── images					   # Web demo images
 │
 ├── src
-│    ├── data_preprocessing.ipynb
-│    └── recommendation_system.ipynb
+│    ├── data_preprocessing.ipynb                  # Data preprocessing and feature engineering
+│    └── recommendation_system.ipynb               # Similarity matrices
 │
-├──requirements.txt
+├──requirements.txt                                # Dependencies
 │
-└── README.md
+└── README.md                                      # This Readme file
 ```
 
 ## 🚀 Getting Started
@@ -109,5 +109,4 @@ streamlit run app.py
 - User Authentication: Allow users to save their reading history and preferences.
 - Goodreads API Integration: Fetch real-time book data and reviews.
 
-[![forthebadge](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMjUuODE2NjY1NjQ5NDE0MDYiIGhlaWdodD0iMzUiIHZpZXdCb3g9IjAgMCAyMjUuODE2NjY1NjQ5NDE0MDYgMzUiPjxyZWN0IHdpZHRoPSIxMTIuMDMzMzMyODI0NzA3MDMiIGhlaWdodD0iMzUiIGZpbGw9IiMwMTAxMDEiLz48cmVjdCB4PSIxMTIuMDMzMzMyODI0NzA3MDMiIHdpZHRoPSIxMTMuNzgzMzMyODI0NzA3MDMiIGhlaWdodD0iMzUiIGZpbGw9IiNkMDAyMWIiLz48dGV4dCB4PSI1Ni4wMTY2NjY0MTIzNTM1MTYiIHk9IjIxLjUiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtZmFtaWx5PSInUm9ib3RvJywgc2Fucy1zZXJpZiIgZmlsbD0iI0ZGRkZGRiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgbGV0dGVyLXNwYWNpbmc9IjIiPkJVSUxEIFdJVEg8L3RleHQ+PHRleHQgeD0iMTY4LjkyNDk5OTIzNzA2MDU1IiB5PSIyMS41IiBmb250LXNpemU9IjEyIiBmb250LWZhbWlseT0iJ01vbnRzZXJyYXQnLCBzYW5zLXNlcmlmIiBmaWxsPSIjRkZGRkZGIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXdlaWdodD0iOTAwIiBsZXR0ZXItc3BhY2luZz0iMiI+U1RSRUFNTElUPC90ZXh0Pjwvc3ZnPg==)](https://forthebadge.com)
-
+![logo](images/build-with-streamlit.svg)

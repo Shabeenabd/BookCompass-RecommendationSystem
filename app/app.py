@@ -5,8 +5,7 @@ import time
 import os
 
 # Define path to saved artifacts.
-parent_dir = os.path.dirname(os.getcwd())
-artifact_dir = os.path.join(parent_dir,'artifacts')
+artifact_dir = os.path.join('artifacts')
 
 # Load precomputed datasets
 book_data = pickle.load(open(f'{artifact_dir}/book_data.pkl','rb'))               # Book metadata (title, author, year, etc.)
